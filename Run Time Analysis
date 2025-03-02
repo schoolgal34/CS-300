@@ -1,0 +1,308 @@
+ 
+
+Evaluation 
+
+Vector run time analysis  
+
+Code 
+
+Line Cost 
+
+# Times Executes 
+
+Total Cost 
+
+OPEN fileName FOR READ 
+
+1 
+
+1 
+
+1 
+
+WHILE NOT End 
+
+1 
+
+n 
+
+n 
+
+READ fileName, line 
+
+1 
+
+n 
+
+n 
+
+courseData[i] <-- line 
+
+1 
+
+n 
+
+n 
+
+i <-- i + 1 
+
+ 
+
+n 
+
+n 
+
+CountCommas(line) 
+
+O(m) 
+
+n 
+
+O(nm_ 
+
+FOR i <-- 1 TO 
+
+1 
+
+n 
+
+n 
+
+temp.courseId <-- parts[1] 
+
+1 
+
+n 
+
+n 
+
+temp.prereqCount <-- LENGTH(parts) - 2 
+
+1 
+
+n 
+
+n 
+
+start <-- 1 
+
+1 
+
+1 
+
+1 
+
+IF SUBSTRING(input, i, 1) = delimiter THEN 
+
+O(m) 
+
+p 
+
+O(pm) 
+
+RETURN parts 
+
+1 
+
+1 
+
+1 
+
+OUTPUT "Error: Incorrect format in line ", i 
+
+1 
+
+1 
+
+n 
+
+CLOSE fileName 
+
+1 
+
+1 
+
+1 
+
+Total Cost 
+
+8n + 1 
+
+Runtime 
+
+O(m) 
+
+ 
+
+The advantages of this structure would be the orderings are simple enough to declare and manipulate. Since the orderings store the elements in joining memory  locations it makes it faster to access due. The disadvantages are the ordering size is predetermined and shifting the operations increase the time complexity.  
+
+ 
+
+ 
+
+Hash Table run time analysis 
+
+Code 
+
+Line Cost 
+
+# Times Executes 
+
+Total Cost 
+
+Open CSV File 
+
+1 
+
+n 
+
+O(1) 
+
+Read Header 
+
+1 
+
+1 
+
+O(1) 
+
+Loop through Rows 
+
+1 
+
+n 
+
+O(n) 
+
+Extract bidId, title, fund, amount 
+
+1 
+
+n 
+
+O(n) 
+
+ 
+
+Convert amount 
+
+ 
+
+n 
+
+O(n) 
+
+ 
+
+ Insert into Hash Table 
+
+1 
+
+n 
+
+O(n) 
+
+ 
+
+Total Cost 
+
+4n + 1 
+
+Runtime 
+
+O(n)^2 
+
+ 
+
+The advantages of this structure are the simplified passing and manipulation of the bid data and it ensures that all bid related dtata follows a fied structure. The disadvantage of this structure is if modification are required, you will have to add more fields which is not as seamless after the fact.  
+
+ 
+
+Tree data run time analysis 
+
+Code 
+
+Line Cost 
+
+# Times Executes 
+
+Total Cost 
+
+OUTPUT "Loading CSV file ", csvPath 
+
+O(1) 
+
+1 
+
+O(1) 
+
+ 
+
+OPEN FILE csvPath FOR READING 
+
+O(1) 
+
+ 
+
+1 
+
+O(1) 
+
+ 
+
+WHILE NOT End OF(csvPath) DO 
+
+ 
+
+ 
+
+ 
+
+REVEAL bid: Bid 
+
+O(1) 
+
+ 
+
+n 
+
+O(n) 
+
+READ FILE csvPath INTO bid.bidId, bid.title, 
+
+O(1) 
+
+ 
+
+n 
+
+O(n) 
+
+ 
+
+bst.Insert(bid) 
+
+ 
+
+ 
+
+ 
+
+CLOSE FILE csvPath 
+
+O(1) 
+
+ 
+
+1 
+
+O(1) 
+
+Total Cost 
+
+ 
+
+Runtime 
+
+ 
+
